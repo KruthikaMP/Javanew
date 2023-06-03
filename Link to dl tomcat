@@ -1,1 +1,41 @@
+help
+install new softwrae
+downloadeclipse.org/releases
+type filter text
+web,xml,java ee and ogi ent dev
+next
+next
+accept
+finish
+takes some time
+===========================================
+download tomcat --https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.32/bin/
+ apache-tomcat-8.0.32-windows-x64.zip 
+ extract
+ 
+ in eclipse 
+ windows 
+ show view
+ other -servers
+ ok
+ config server
+ click this link to create new server
+ apache
+ tomcat v8.0
+ next
+ browse
+ ok
+ double click on server
+ under server loc 
+ use tomcat installlation
+  start server
+ 
+ finish
+file
+new 
+other 
+java ee
+ent app proj
+pname
 https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.32/bin/
+ apache-tomcat-8.0.32-windows-x64.zip 
