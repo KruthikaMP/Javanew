@@ -1,0 +1,25 @@
+import java.io.*;
+throws FileNotFoundException, IOException
+String PROPERTIES_FILE = "database.properties";
+        	  Properties properties = new Properties();
+        	properties.load(new FileInputStream(PROPERTIES_FILE));
+            conn = DriverManager.getConnection("jdbc:sqlserver://172.16.51.44;", properties);
+            
+            
+            
+            
+            
+       
+    public static void main(String[] args) throws FileNotFoundException, IOException, SQLException {
+        // Create database tables
+    	 Logger logger = LogManager.getRootLogger();
+    	 
+  	  
+  	Scanner scanner = new Scanner(System.in);
+  	String PROPERTIES_FILE = "database.properties";
+	  Properties properties = new Properties();
+	properties.load(new FileInputStream(PROPERTIES_FILE));
+  //conn = DriverManager.getConnection("jdbc:sqlserver://172.16.51.44;", properties);
+     
+    boolean exit = false;
+               
