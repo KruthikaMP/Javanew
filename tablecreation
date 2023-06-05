@@ -1,0 +1,56 @@
+table cration
+=========Book App========================
+CREATE TABLE Book (
+    book_id INT IDENTITY(1,1) PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE Customer (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+CREATE TABLE `Order` (
+    order_id INT PRIMARY KEY,
+    book_id INT NOT NULL,
+    customer_id INT NOT NULL,
+    FOREIGN KEY (book_id) REFERENCES Book (book_id),
+    FOREIGN KEY (customer_id) REFERENCES Customer (customer_id)
+);
+=========Room app==========
+CREATE TABLE Student (
+  student_id INT PRIMARY KEY,
+  name VARCHAR(255),
+  room_number INT
+);
+CREATE TABLE Student_RoomNumber_Map (
+  map_id INT PRIMARY KEY,
+  student_id INT,
+  room_number INT,
+  FOREIGN KEY (student_id) REFERENCES Student(student_id)
+);
+=========Academic=====================
+CREATE TABLE Base (
+  student_id INT PRIMARY KEY,
+  student_name VARCHAR(50),
+  elective_score_percentage DECIMAL(5, 2)
+);
+
+-- Create the ElectiveSubject table
+CREATE TABLE ElectiveSubject (
+  subject_id INT PRIMARY KEY,
+  subject_name VARCHAR(50)
+);
+
+-- Create the StudentElectiveScore table
+CREATE TABLE StudentElectiveScore (
+  score_id INT PRIMARY KEY,
+  student_id INT,
+  subject_id INT,
+  score DECIMAL(5, 2),
+  FOREIGN KEY (student_id) REFERENCES Base(student_id),
+  FOREIGN KEY (subject_id) REFERENCES ElectiveSubject(subject_id)
+);
